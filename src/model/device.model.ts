@@ -1,7 +1,7 @@
 import mongoose, { Schema, model } from 'mongoose';
-import {device} from '../interface/user.interface'
+import {device} from '../interface/interface'
 import { v4 as uuidv4 } from 'uuid';
-import { ENUM } from '../constant/app.constant'
+// import { ENUM } from '../constant/app.constant'
 import { bool, boolean } from 'joi';
 
 
@@ -25,11 +25,11 @@ const deviceSchema = new Schema<device>({
         type:Schema.Types.ObjectId,
         ref: 'user'
     },
-    status:{
-        type:Boolean,
-        enum:ENUM.STATUS
+    // status:{
+    //     type:Boolean,
+    //     enum:ENUM.STATUS
        
-    },
+    // },
    },
 {
   timestamps: true
